@@ -7,21 +7,21 @@ app.use(morgan('combined'));
 
 
 var articles={
-    'article-one':{
+    'articleone':{
         title:'Article one | Matariya Savan',
         heading:'Article one',
         date:'Oct 16,2016',
         content:`
                 <p> Hi ! it's Article one written by Savan Matariya<p>`
     },
-     'article-two':{
+     'articletwo':{
         title:'Article two | Matariya Savan',
         heading:'Article two',
         date:'Oct 20,2016',
         content:`
                 <p> Hi ! it's Article two written by Savan Matariya<p>`
     },
-     'article-three':{
+     'articlethree':{
         title:'Article three | Matariya Savan',
         heading:'Article three',
         date:'Oct 22,2016',
@@ -66,10 +66,17 @@ function createTemplate(data){
     return htmlTemplate;
 }
 app.get('/:articleName', function (req, res) {
-    var articleName=req.params.articleName;
+  var articleName=req.params.articleName;
   res.send(path.join(createTemplate(articles[articleName])));
 });
 
+app.get('/ui/style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+
+app.get('/ui/madi.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
