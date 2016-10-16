@@ -7,21 +7,21 @@ app.use(morgan('combined'));
 
 
 var articles={
-    'articleone':{
+    'article-one':{
         title:'Article one | Matariya Savan',
         heading:'Article one',
         date:'Oct 16,2016',
         content:`
                 <p> Hi ! it's Article one written by Savan Matariya<p>`
     },
-     'articletwo':{
+     'article-two':{
         title:'Article two | Matariya Savan',
         heading:'Article two',
         date:'Oct 20,2016',
         content:`
                 <p> Hi ! it's Article two written by Savan Matariya<p>`
     },
-     'articlethree':{
+     'article-three':{
         title:'Article three | Matariya Savan',
         heading:'Article three',
         date:'Oct 22,2016',
