@@ -1,34 +1,152 @@
-<!doctype html>
 <html>
-    <head>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-       <div class="container">
-            <div class="center">
-                <img src="https://scontent.fbom1-1.fna.fbcdn.net/v/t1.0-9/13627194_1745719665710650_8279798557137268330_n.jpg?oh=70ab351833e3e181476f1f7747170eec&oe=589A7EA2" class="img-medium"/>
-            </div>
-            <hr/>
-            <h3>
-                Personal info
-            </h3>
-            <div> Hi ! My Name is Matariya Savan </div>
-            <hr/>
-            <h3>
-                professional
-            </h3>
-            <div>
-                Currently persuing B.Tech(IT) at Nirma University
-            </div>
-            <hr/>         
-            <div class="footer">
-             <button id="counter">clickMe  </button> to upvote the webpage !      ||
-             
-            upvoted <span id="count">  0  </span>times
-            </div>
-            
-        </div> 
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
-    </body>
+	<head>
+	<style>
+	body{
+	background-color:black;
+	}
+	
+	div.header{
+		color:white;
+		padding:10px;
+		height:40px;
+		width:1366px;
+		text-align:center;
+		background-color:black;
+		font-family:verdana;
+		font-size:18x;
+		text-decoration:none;
+		font-weight:3px;
+		display:block-inline;
+	}
+		
+	#logo{
+		height:45px;
+		width:45px;
+		float:left;
+		margin-left:20px;
+		vertical-align:top;
+		margin-top: 0px;	
+		
+	}
+		
+	div.cover{
+		width:1330px;		
+		height:50px;
+	}
+		
+	span{
+		vertical-align:middle;
+		color:white;
+	}
+		
+	#shop ,#Country, #login{
+		height:20px;
+		width:20px;
+		float:right;
+		margin-right:30px;
+		vertical-align:middle;
+	}
+	
+	abbr{
+	color:red;
+	font-family:verdana;
+	background-color:gray;
+	font-weight:2px;
+	}
+	
+	#i1, #i2, #i3 {
+	height:250px;
+	width:33%;
+	background-color:gray;
+	display:inline-block;
+	margin:0.5px;
+	}
+	
+	a {
+		display: inline-block;
+		color: white;
+		text-align: center;
+		padding:8px;
+		text-decoration: none;
+		transition: 0.3s;
+		font-size: 17px;
+		
+	}
+	
+	container.p{
+	color:white;
+	text-align:center;
+	font-size:14px;
+	}
+	
+	a:hover {
+			color: gray;
+			
+	}
+	
+
+	a:focus, .active {
+			color: red;
+	}
+	
+	</style>
+
+</head>
+
+<body>	
+	<div class="header">
+	
+				<span><img id ="logo" src="LOGO.png" alt="onePlusStore"/><span>
+				<span><a href="#" class="tablinks" onclick="openTab(event, 'onePlus3')">OnePlus3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+				<span><a href="#" class="tablinks" onclick="openTab(event, 'onePlus2')">OnePlus2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+				<span><a href="#" class="tablinks" onclick="openTab(event, 'onePlusX')">OnePlusX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+				<span><a href="#" class="tablinks" onclick="openTab(event, 'onePlus1')">OnePlus1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+				<span><a href="#" class="tablinks" onclick="openTab(event, 'support')">Support&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+				<span><a href="#" class="tablinks" onclick="openTab(event, 'community')">Community&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+				<span><a href="#"><abbr title="Login"><img id ="login" src="login.png" alt="login"/></abbr></a></span>
+				<span><a href="#"><abbr title="Shop"><img id ="shop" src="SHOP.png" alt="ShoppingCart"/></abbr></a></span>
+				<span><a href="#"><abbr title="Indian Region"><img id ="Country" src="Country.jpg" alt="Country"/></abbr></a></span>
+				
+	</div>
+		<div style="height:3px"> </div>
+		<div class="cover">
+			<img id="cover" src="ONP3.jpg" alt="cover" height=500 width=1368 />
+		</div>
+
+		
+		
+			<span><p style="font-family:verdana;font-size:50px;color:red;margin:155px;">Never<br/>&nbsp;&nbsp;Settle</p></span>
+		
+		<div class="container">
+			<div id=i1 >
+				<p>This is div 1</p>
+			</div>
+		
+			<div id=i2 >
+				<p>This is div 2</p>
+			</div>
+		
+			<div id=i3 >
+				<p>This is div 3</p>
+			</div>
+		<div>
+<script>
+		function openTab(evt, TabName) {
+			var i, tabcontent, tablinks;
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}	
+			
+			tablinks = document.getElementsByClassName("tablinks");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(" active", "");
+				}
+		
+			document.getElementById(TabName).style.display = "block";
+			evt.currentTarget.className += " active";
+
+</script>
+		</body>
+
 </html>
